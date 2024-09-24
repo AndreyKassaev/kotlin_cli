@@ -21,7 +21,7 @@ kotlin {
 }
 tasks.register<Jar>("uberJar") {
     archiveClassifier = "uber"
-
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
     from(sourceSets.main.get().output)
 
     manifest {
